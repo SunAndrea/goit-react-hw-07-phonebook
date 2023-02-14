@@ -20,6 +20,7 @@ export const App = () => {
     <div
       style={{
         display: 'flex',
+        position: 'relative',
         flexDirection: 'column',
         alignItems: 'center',
         maxWidth: '480px',
@@ -34,7 +35,11 @@ export const App = () => {
       <ContactsForm />
       <h2>Contacts</h2>
       <Filter />
-      {isLoading && <p>Loading...</p>}
+      {isLoading && (
+        <p style={{ color: 'red', position: 'absolute', top: '385px' }}>
+          Loading...
+        </p>
+      )}
       <ContactsList />
     </div>
   );
